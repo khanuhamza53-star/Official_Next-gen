@@ -3,19 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEXT GEN MEDIA | Dynamic Storytelling</title>
+    <title>NEXT GEN MEDIA | Structured Professionalism</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         :root {
-            --color-primary-red: #E50914; /* A strong, iconic red */
-            --color-dark-bg: #141414;     /* Netflix-like deep dark */
-            --color-darker-bg: #000000;   /* Pure black */
-            --color-text-light: #E0E0E0;  /* Off-white for readability */
+            --color-primary-red: #C00000; /* Deep, professional red */
+            --color-dark-bg: #000000;     /* Pure Black */
+            --color-text-light: #F0F0F0;  /* Off-white */
         }
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--color-darker-bg);
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--color-dark-bg);
             color: var(--color-text-light);
             line-height: 1.6;
             scroll-behavior: smooth;
@@ -29,174 +28,198 @@
         .border-primary-red {
             border-color: var(--color-primary-red);
         }
-        /* Custom styles for team photos: This ensures circular shape, border, and size */
-        .member-photo-placeholder {
-            width: 96px; /* w-24 */
-            height: 96px; /* h-24 */
-            background-color: #333; /* Dark grey for placeholder */
-            border-radius: 50%; /* <<<<< THIS MAKES IT ROUND >>>>> */
-            border: 2px solid var(--color-primary-red);
-            margin-bottom: 1rem; /* mb-4 */
-            /* Ensures the photo fits perfectly in the circle */
-            object-fit: cover; 
-            display: block; /* Important for <img> tag */
+        
+        /* Custom styles for round team photos */
+        .member-photo {
+            width: 80px; /* w-20 */
+            height: 80px; /* h-20 */
+            background-color: #333; 
+            border-radius: 50%; /* <<<<< ROUND IMAGE STYLING >>>>> */
+            border: 3px solid var(--color-primary-red);
+            margin-bottom: 0.75rem; /* mb-3 */
+            object-fit: cover;
+            display: block; 
+        }
+
+        /* Styling for the large modular headings */
+        .modular-heading {
+            font-size: 3rem; 
+            font-weight: 900;
+            letter-spacing: -1px;
+            text-transform: uppercase;
         }
     </style>
 </head>
 <body>
 
-    <header class="sticky top-0 z-50 bg-black/90 backdrop-blur-sm shadow-lg border-b border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
-            <a href="#" class="text-2xl font-extrabold text-primary-red tracking-widest">NGM</a>
-            <nav class="hidden md:flex space-x-8 text-sm">
-                <a href="#about" class="text-gray-300 hover:text-primary-red transition duration-300 font-medium">About</a>
-                <a href="#streams" class="text-gray-300 hover:text-primary-red transition duration-300 font-medium">Streams</a>
-                <a href="#team" class="text-gray-300 hover:text-primary-red transition duration-300 font-medium">Team</a>
-                <a href="#contact" class="text-gray-300 hover:text-primary-red transition duration-300 font-medium">Contact</a>
-                <a href="[Your_YouTube_Link]" target="_blank" class="bg-primary-red text-white px-4 py-1.5 rounded-full font-semibold hover:bg-red-700 transition duration-300 shadow-md">
-                    Watch Now
-                </a>
+    <header class="sticky top-0 z-50 bg-black/95 backdrop-blur-sm border-b-4 border-primary-red">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
+            <a href="#" class="text-3xl font-extrabold text-white tracking-widest relative">
+                NGM<span class="absolute right-[-10px] bottom-0 text-primary-red text-6xl leading-none">.</span>
+            </a>
+            <nav class="hidden md:flex space-x-10 text-lg font-medium">
+                <a href="#about" class="text-gray-300 hover:text-primary-red transition duration-300">ABOUT</a>
+                <a href="#streams" class="text-gray-300 hover:text-primary-red transition duration-300">STREAMS</a>
+                <a href="#team" class="text-gray-300 hover:text-primary-red transition duration-300">TEAM</a>
+                <a href="#contact" class="text-white bg-primary-red px-4 py-2 rounded-sm hover:bg-red-700 transition duration-300">CONTACT</a>
             </nav>
-            <button class="md:hidden text-white text-2xl" aria-label="Open menu">☰</button>
+            <button class="md:hidden text-white text-3xl" aria-label="Open menu">☰</button>
         </div>
     </header>
 
-    <section class="h-[90vh] flex items-center justify-center text-center bg-black">
-        <div class="relative z-10 max-w-4xl px-6">
-            <h1 class="text-6xl sm:text-7xl lg:text-8xl font-black text-white mb-6 leading-tight">
-                Crafting Stories That Resonate.
+    <section class="h-[95vh] flex items-center justify-center text-center bg-black">
+        <div class="relative z-10 max-w-5xl px-6">
+            <h1 class="text-7xl sm:text-8xl lg:text-[7.5rem] font-black text-white mb-6 leading-none">
+                <span class="text-primary-red">VISUAL</span> <br class="sm:hidden">
+                STORYTELLING.
             </h1>
-            <p class="text-xl sm:text-2xl text-gray-400 mb-12 font-light">
-                NEXT GEN MEDIA is where innovation meets impact in visual storytelling.
+            <p class="text-2xl sm:text-3xl text-gray-400 font-light mt-10 tracking-wide">
+                Innovation meets impact in global media production.
             </p>
-            <a href="#team" class="bg-primary-red text-white font-bold py-3 px-10 rounded-full text-lg shadow-xl transition duration-300 hover:bg-red-700">
-                MEET THE TEAM
-            </a>
         </div>
     </section>
 
-    <section id="about" class="py-24 bg-gray-900 border-t border-gray-800">
-        <div class="max-w-6xl mx-auto px-4 text-center">
-            <h2 class="text-4xl font-bold text-primary-red mb-4">Who We Are</h2>
-            <p class="text-lg text-gray-300 max-w-4xl mx-auto leading-relaxed border-l-4 border-primary-red pl-6 py-2">
-                NEXT GEN MEDIA is a collaborative force of filmmakers, journalists, and creatives dedicated to producing compelling content. We merge cutting-edge visuals with rigorous narrative, creating impactful stories that captivate audiences worldwide. Our passion lies in pushing boundaries and setting new standards in digital media.
-            </p>
+    <hr class="border-primary-red">
+
+    <section id="about" class="py-24 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-12 items-start">
+            <div class="md:col-span-1">
+                <p class="text-primary-red text-xl font-bold uppercase tracking-widest mb-3">01 // THE MANDATE</p>
+                <h2 class="modular-heading text-white">Our Mission</h2>
+            </div>
+            <div class="md:col-span-2">
+                <blockquote class="text-2xl italic text-gray-300 leading-relaxed pl-6 border-l-4 border-white/50">
+                    "NEXT GEN MEDIA is a collective dedicated to pushing the boundaries of documentary and journalistic content. We blend cinematic quality with narrative rigor to produce media that matters, fostering global dialogue through exceptional storytelling."
+                </blockquote>
+            </div>
         </div>
     </section>
+
+    <hr class="border-primary-red">
 
     <section id="streams" class="py-24 bg-black">
         <div class="max-w-7xl mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center text-white mb-16">OUR DYNAMIC STREAMS</h2>
+            <div class="mb-16">
+                <p class="text-primary-red text-xl font-bold uppercase tracking-widest mb-3 text-center">02 // THE CHANNELS</p>
+                <h2 class="modular-heading text-white text-center">Content Streams</h2>
+            </div>
+            
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 
-                <div class="bg-gray-900 p-8 rounded-lg shadow-xl border-t-4 border-primary-red transition duration-300 hover:shadow-2xl hover:bg-gray-800/70">
-                    <h3 class="text-3xl font-bold text-white mb-3">01. Original Documentaries</h3>
-                    <p class="text-gray-400">Award-winning short and long-form documentaries that uncover powerful narratives.</p>
+                <div class="bg-gray-900 p-8 border-l-4 border-primary-red transition duration-300 hover:bg-gray-800">
+                    <h3 class="text-3xl font-bold text-white mb-3">Documentaries</h3>
+                    <p class="text-gray-400">Long-form features focusing on compelling human and global narratives.</p>
                 </div>
                 
-                <div class="bg-gray-900 p-8 rounded-lg shadow-xl border-t-4 border-primary-red transition duration-300 hover:shadow-2xl hover:bg-gray-800/70">
-                    <h3 class="text-3xl font-bold text-white mb-3">02. Investigative Journalism</h3>
-                    <p class="text-gray-400">In-depth reports and series, revealing truths with integrity and precision.</p>
+                <div class="bg-gray-900 p-8 border-l-4 border-primary-red transition duration-300 hover:bg-gray-800">
+                    <h3 class="text-3xl font-bold text-white mb-3">Investigative</h3>
+                    <p class="text-gray-400">Deep-dive journalistic reports requiring meticulous research and production.</p>
                 </div>
                 
-                <div class="bg-gray-900 p-8 rounded-lg shadow-xl border-t-4 border-primary-red transition duration-300 hover:shadow-2xl hover:bg-gray-800/70">
-                    <h3 class="text-3xl font-bold text-white mb-3">03. Digital Content Production</h3>
-                    <p class="text-gray-400">Engaging video and audio content optimized for modern digital platforms.</p>
+                <div class="bg-gray-900 p-8 border-l-4 border-primary-red transition duration-300 hover:bg-gray-800">
+                    <h3 class="text-3xl font-bold text-white mb-3">Digital Strategy</h3>
+                    <p class="text-gray-400">Crafting high-engagement content for optimized social distribution.</p>
                 </div>
                 
-                <div class="bg-gray-900 p-8 rounded-lg shadow-xl border-t-4 border-primary-red transition duration-300 hover:shadow-2xl hover:bg-gray-800/70">
-                    <h3 class="text-3xl font-bold text-white mb-3">04. Brand Storytelling</h3>
-                    <p class="text-gray-400">Crafting compelling narratives for brands that seek authentic audience connection.</p>
+                <div class="bg-gray-900 p-8 border-l-4 border-primary-red transition duration-300 hover:bg-gray-800">
+                    <h3 class="text-3xl font-bold text-white mb-3">Podcasts</h3>
+                    <p class="text-gray-400">Audio series featuring interviews with leaders and creators in media.</p>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <section id="team" class="py-24 bg-gray-900 border-t border-gray-800">
+    <hr class="border-primary-red">
+
+    <section id="team" class="py-24 bg-gray-900">
         <div class="max-w-7xl mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center text-white mb-4">Meet the Collective</h2>
-            <p class="text-lg text-gray-400 text-center mb-16">The passionate minds driving our vision forward.</p>
+            <div class="mb-16">
+                <p class="text-primary-red text-xl font-bold uppercase tracking-widest mb-3 text-center">03 // THE ENGINE</p>
+                <h2 class="modular-heading text-white text-center">The Collective</h2>
+            </div>
             
-            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
                 
-                <div class="flex flex-col items-center p-6 bg-black rounded-lg shadow-lg border border-gray-800 transition duration-300 hover:border-primary-red hover:shadow-2xl">
-                    <img src="amza_photo.jpg" alt="Photo of Amza" class="member-photo-placeholder">
-                    <h3 class="text-xl font-semibold text-white">AMZA</h3>
-                    <p class="role text-sm text-primary-red mt-1">Lead Director / Cinematography</p>
+                <div class="flex flex-col items-center p-4 bg-black border border-gray-800 hover:border-white transition duration-300">
+                    <img src="x" alt="Placeholder image for Amza" class="member-photo">
+                    <h3 class="text-lg font-semibold text-white">AMZA</h3>
+                    <p class="role text-sm text-primary-red mt-1 text-center">Lead Director / Cinematography</p>
                 </div>
                 
-                <div class="flex flex-col items-center p-6 bg-black rounded-lg shadow-lg border border-gray-800 transition duration-300 hover:border-primary-red hover:shadow-2xl">
-                    <img src="joshua_photo.jpg" alt="Photo of Joshua" class="member-photo-placeholder">
+                <div class="flex flex-col items-center p-4 bg-black border border-gray-800 hover:border-white transition duration-300">
+                    <img src="x" alt="Placeholder image for Joshua" class="member-photo">
                     <h3>JOSHUA</h3>
-                    <p class="role text-sm text-primary-red mt-1">Member</p>
+                    <p class="role text-sm text-primary-red mt-1 text-center">Member</p>
                 </div>
                 
-                <div class="flex flex-col items-center p-6 bg-black rounded-lg shadow-lg border border-gray-800 transition duration-300 hover:border-primary-red hover:shadow-2xl">
-                    <img src="mbalu_photo.jpg" alt="Photo of Mbalu" class="member-photo-placeholder">
+                <div class="flex flex-col items-center p-4 bg-black border border-gray-800 hover:border-white transition duration-300">
+                    <img src="x" alt="Placeholder image for Mbalu" class="member-photo">
                     <h3>MBALU</h3>
-                    <p class="role text-sm text-primary-red mt-1">Member</p>
+                    <p class="role text-sm text-primary-red mt-1 text-center">Member</p>
                 </div>
                 
-                <div class="flex flex-col items-center p-6 bg-black rounded-lg shadow-lg border border-gray-800 transition duration-300 hover:border-primary-red hover:shadow-2xl">
-                    <img src="hajaratu_photo.jpg" alt="Photo of Hajaratu" class="member-photo-placeholder">
+                <div class="flex flex-col items-center p-4 bg-black border border-gray-800 hover:border-white transition duration-300">
+                    <img src="x" alt="Placeholder image for Hajaratu" class="member-photo">
                     <h3>HAJARATU</h3>
-                    <p class="role text-sm text-primary-red mt-1">Member</p>
+                    <p class="role text-sm text-primary-red mt-1 text-center">Member</p>
                 </div>
                 
-                <div class="flex flex-col items-center p-6 bg-black rounded-lg shadow-lg border border-gray-800 transition duration-300 hover:border-primary-red hover:shadow-2xl">
-                    <img src="phina_photo.jpg" alt="Photo of Phina" class="member-photo-placeholder">
+                <div class="flex flex-col items-center p-4 bg-black border border-gray-800 hover:border-white transition duration-300">
+                    <img src="x" alt="Placeholder image for Phina" class="member-photo">
                     <h3>PHINA</h3>
-                    <p class="role text-sm text-primary-red mt-1">Member</p>
+                    <p class="role text-sm text-primary-red mt-1 text-center">Member</p>
                 </div>
                 
-                <div class="flex flex-col items-center p-6 bg-black rounded-lg shadow-lg border border-gray-800 transition duration-300 hover:border-primary-red hover:shadow-2xl">
-                    <img src="ella_photo.jpg" alt="Photo of Ella" class="member-photo-placeholder">
+                <div class="flex flex-col items-center p-4 bg-black border border-gray-800 hover:border-white transition duration-300">
+                    <img src="x" alt="Placeholder image for Ella" class="member-photo">
                     <h3>ELLA</h3>
-                    <p class="role text-sm text-primary-red mt-1">Member</p>
+                    <p class="role text-sm text-primary-red mt-1 text-center">Member</p>
                 </div>
                 
-                <div class="flex flex-col items-center p-6 bg-black rounded-lg shadow-lg border border-gray-800 transition duration-300 hover:border-primary-red hover:shadow-2xl">
-                    <img src="lucy_photo.jpg" alt="Photo of Lucy" class="member-photo-placeholder">
+                <div class="flex flex-col items-center p-4 bg-black border border-gray-800 hover:border-white transition duration-300">
+                    <img src="x" alt="Placeholder image for Lucy" class="member-photo">
                     <h3>LUCY</h3>
-                    <p class="role text-sm text-primary-red mt-1">Member</p>
+                    <p class="role text-sm text-primary-red mt-1 text-center">Member</p>
                 </div>
 
-               <div class="flex flex-col items-center p-4 bg-black border border-gray-800 hover:border-white transition duration-300">
-    <img src="boller_king_photo.jpg" alt="Photo of Boller_King" class="member-photo">
-    <h3>BOLLER_KING</h3>
-    <p class="role text-sm text-primary-red mt-1 text-center">Photo Editor</p>
-</div>
+                <div class="flex flex-col items-center p-4 bg-black border border-gray-800 hover:border-white transition duration-300">
+                    <img src="x" alt="Placeholder image for Boller_King" class="member-photo">
+                    <h3>BOLLER_KING</h3>
+                    <p class="role text-sm text-primary-red mt-1 text-center">Photo Editor</p>
+                </div>
 
-                <div class="flex flex-col items-center p-6 bg-black rounded-lg shadow-lg border border-gray-800 transition duration-300 hover:border-primary-red hover:shadow-2xl">
-                    <img src="skinny_posh_photo.jpg" alt="Photo of Skinny_Posh" class="member-photo-placeholder">
+                <div class="flex flex-col items-center p-4 bg-black border border-gray-800 hover:border-white transition duration-300">
+                    <img src="x" alt="Placeholder image for Skinny_Posh" class="member-photo">
                     <h3>SKINNY_POSH</h3>
-                    <p class="role text-sm text-primary-red mt-1">Video Editor</p>
+                    <p class="role text-sm text-primary-red mt-1 text-center">Video Editor</p>
                 </div>
                 
-                <div class="flex flex-col items-center p-6 bg-black rounded-lg shadow-lg border border-gray-800 transition duration-300 hover:border-primary-red hover:shadow-2xl">
-                  <img src="sharp_boy_photo.jpg" alt="Photo of Sharp_Boy" class="member-photo">
+                <div class="flex flex-col items-center p-4 bg-black border border-gray-800 hover:border-white transition duration-300">
+                    <img src="x" alt="Placeholder image for Sharp_Boy" class="member-photo">
                     <h3>SHARP_BOY</h3>
-                    <p class="role text-sm text-primary-red mt-1">Assistant Photo Editor</p>
+                    <p class="role text-sm text-primary-red mt-1 text-center">Assistant Photo Editor</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="py-24 bg-black text-center border-t border-gray-800">
+    <hr class="border-primary-red">
+
+    <section id="contact" class="py-24 bg-black text-center">
         <div class="max-w-4xl mx-auto px-4">
-            <h2 class="text-4xl font-bold text-white mb-6">Partner With Us.</h2>
-            <p class="text-xl text-gray-400 mb-10">Ready to bring your vision to life? Let's connect and create something extraordinary.</p>
-            <a href="mailto:contact@nextgenmedia.com" class="bg-primary-red text-white font-bold py-4 px-12 rounded-full text-xl shadow-xl transition duration-300 hover:bg-red-700">
-                GET IN TOUCH
+            <p class="text-primary-red text-xl font-bold uppercase tracking-widest mb-3">04 // CONNECT</p>
+            <h2 class="modular-heading text-white mb-8">Let's Collaborate.</h2>
+            <a href="mailto:contact@nextgenmedia.com" class="bg-primary-red text-white font-bold py-4 px-12 rounded-sm text-xl shadow-xl transition duration-300 hover:bg-red-700">
+                INQUIRE NOW
             </a>
         </div>
     </section>
 
-    <footer class="bg-gray-900 py-8 border-t border-gray-800">
+    <footer class="bg-black py-8 border-t border-gray-800">
         <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center text-sm text-gray-400">
             <p>&copy; 2025 NEXT GEN MEDIA. All rights reserved.</p>
-            <div class="space-x-4 mt-4 sm:mt-0">
+            <div class="space-x-6 mt-4 sm:mt-0">
                 <a href="[Your_YouTube_Link]" target="_blank" class="hover:text-primary-red transition duration-300">YouTube</a>
                 <a href="[Your_Instagram_Link]" target="_blank" class="hover:text-primary-red transition duration-300">Instagram</a>
             </div>
