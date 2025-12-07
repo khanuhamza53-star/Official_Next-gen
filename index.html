@@ -67,6 +67,15 @@
             width: 100%;
             height: 95%;
         }
+
+        /* New custom style for text stroke using text-shadow */
+        .text-stroke-sm {
+            text-shadow: 
+                1px 1px 0 #000,
+                -1px -1px 0 #000,
+                1px -1px 0 #000,
+                -1px 1px 0 #000;
+        }
     </style>
 </head>
 <body>
@@ -109,7 +118,7 @@
         <div class="relative z-10 max-w-5xl px-6">
             <h1 class="text-5xl sm:text-8xl lg:text-[7.5rem] font-black text-white mb-6 leading-none">
                 <span class="text-primary-red">VISUAL</span> 
-                <span class="sm:hidden">STORYTELLING.</span>
+                <span class="text-stroke-sm">STORYTELLING.</span>
             </h1>
             <p class="text-lg sm:text-3xl text-gray-400 font-light mt-10 tracking-wide px-4">
                 Innovation meets impact in global media production.
@@ -250,7 +259,7 @@
             <h2 class="modular-heading text-white mb-10">Our Latest Production.</h2>
             
             <div class="video-container mx-auto max-w-3xl mb-10">
-                </div>
+            </div>
             
             <a href="https://www.youtube.com/@NextGenMediaSL" target="_blank" class="bg-white text-black font-bold py-3 px-10 rounded-sm text-lg transition duration-300 hover:bg-gray-300">
                 VISIT YOUTUBE CHANNEL
