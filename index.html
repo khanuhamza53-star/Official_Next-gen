@@ -9,9 +9,9 @@
     <script src="https://unpkg.com/feather-icons"></script> 
     <style>
         :root {
-            --color-primary-red: #C00000; /* Deep, professional red */
-            --color-dark-bg: #000000;      /* Pure Black */
-            --color-text-light: #F0F0F0;  /* Off-white */
+            --color-primary-red: #C00000;
+            --color-dark-bg: #000000;
+            --color-text-light: #F0F0F0;
         }
         body {
             font-family: 'Helvetica Neue', Arial, sans-serif;
@@ -20,19 +20,12 @@
             line-height: 1.6;
             scroll-behavior: smooth;
         }
-        .text-primary-red {
-            color: var(--color-primary-red);
-        }
-        .bg-primary-red {
-            background-color: var(--color-primary-red);
-        }
-        .border-primary-red {
-            border-color: var(--color-primary-red);
-        }
+        .text-primary-red { color: var(--color-primary-red); }
+        .bg-primary-red { background-color: var(--color-primary-red); }
+        .border-primary-red { border-color: var(--color-primary-red); }
         
         .member-photo {
-            width: 80px; 
-            height: 80px; 
+            width: 80px; height: 80px; 
             background-color: #333; 
             border-radius: 50%; 
             border: 3px solid var(--color-primary-red);
@@ -42,238 +35,161 @@
         }
 
         .modular-heading {
-            font-size: 3rem; 
-            font-weight: 900;
-            letter-spacing: -1px;
-            text-transform: uppercase;
+            font-size: 3rem; font-weight: 900;
+            letter-spacing: -1px; text-transform: uppercase;
         }
         
         .video-container {
-            position: relative;
-            padding-bottom: 56.25%; 
-            height: 0;
-            overflow: hidden;
-            max-width: 100%;
-            background-color: #1a1a1a;
-            border: 4px solid var(--color-primary-red);
+            position: relative; padding-bottom: 56.25%; height: 0;
+            overflow: hidden; max-width: 100%;
+            background-color: #1a1a1a; border: 4px solid var(--color-primary-red);
         }
         .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 95%;
+            position: absolute; top: 0; left: 0; width: 100%; height: 95%;
         }
 
         .text-stroke-sm {
-            text-shadow: 
-                1px 1px 0 #000,
-                -1px -1px 0 #000,
-                1px -1px 0 #000,
-                -1px 1px 0 #000;
+            text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
         }
 
-        /* Modal Animation */
         @keyframes modalFadeIn {
             from { opacity: 0; transform: scale(0.95); }
             to { opacity: 1; transform: scale(1); }
         }
-        .modal-animate {
-            animation: modalFadeIn 0.3s ease-out;
-        }
+        .modal-animate { animation: modalFadeIn 0.3s ease-out; }
     </style>
 </head>
 <body>
 
     <header class="sticky top-0 z-50 bg-black/95 backdrop-blur-sm border-b-4 border-primary-red">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
+        <div class="max-w-7xl mx-auto px-4 flex justify-between items-center h-20">
             <a href="#" class="flex items-center">
-                <img src="ngm_photo.jpg" alt="NEXT GEN MEDIA Logo" class="w-12 h-auto object-contain border-2 border-primary-red">
-                <span class="text-3xl font-extrabold text-white tracking-widest ml-3 hidden sm:block">NEXT GEN MEDIA</span>
+                <img src="ngm_photo.jpg" alt="Logo" class="w-12 h-auto border-2 border-primary-red">
+                <span class="text-3xl font-extrabold text-white ml-3 hidden sm:block tracking-widest">NEXT GEN MEDIA</span>
             </a>
             <nav class="hidden md:flex space-x-10 text-lg font-medium">
-                <a href="#about" class="text-gray-300 hover:text-primary-red transition duration-300">ABOUT</a>
-                <a href="#streams" class="text-gray-300 hover:text-primary-red transition duration-300">STREAMS</a>
-                <a href="#latest-release" class="text-gray-300 hover:text-primary-red transition duration-300">WATCH</a>
-                <a href="#team" class="text-gray-300 hover:text-primary-red transition duration-300">TEAM</a>
+                <a href="#about" class="text-gray-300 hover:text-primary-red transition">ABOUT</a>
+                <a href="#streams" class="text-gray-300 hover:text-primary-red transition">STREAMS</a>
+                <a href="#latest-release" class="text-gray-300 hover:text-primary-red transition">WATCH</a>
+                <a href="#team" class="text-gray-300 hover:text-primary-red transition">TEAM</a>
             </nav>
-            <a href="mailto:contact@nextgenmedia.com" class="hidden md:block text-white bg-primary-red px-4 py-2 rounded-sm hover:bg-red-700 transition duration-300 font-medium text-lg">INQUIRE</a>
-            <button class="md:hidden text-white text-3xl">☰</button>
+            <a href="mailto:contact@nextgenmedia.com" class="hidden md:block text-white bg-primary-red px-4 py-2 font-medium">INQUIRE</a>
         </div>
     </header>
-
-    <section class="h-[95vh] flex items-center justify-center text-center" style="background-image: url('IT Sector.jpg'); background-size: cover; background-position: center;">
-        <div class="relative z-10 max-w-5xl px-6">
-            <h1 class="text-5xl sm:text-8xl lg:text-[7.5rem] font-black text-white mb-6 leading-none">
-                <span class="text-primary-red">VISUAL</span> 
-                <span class="text-stroke-sm">STORYTELLING.</span>
-            </h1>
-            <p class="text-lg sm:text-3xl text-gray-400 font-light mt-10 tracking-wide px-4">Innovation meets impact in global media production.</p>
-        </div>
-    </section>
-
-    <section id="about" class="py-24 bg-gray-900 border-t border-primary-red">
-        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-12 items-start">
-            <div class="md:col-span-1">
-                <p class="text-primary-red text-xl font-bold uppercase tracking-widest mb-3">01 // THE MANDATE</p>
-                <h2 class="modular-heading text-white">Our Mission</h2>
-            </div>
-            <div class="md:col-span-2">
-                <blockquote class="text-2xl italic text-gray-300 leading-relaxed pl-6 border-l-4 border-white/50">
-                    "NEXT GEN MEDIA is a collective dedicated to pushing the boundaries of documentary and journalistic content. We blend cinematic quality with narrative rigor to produce media that matters."
-                </blockquote>
-            </div>
-        </div>
-    </section>
-
-    <section id="streams" class="py-24 bg-black border-t border-primary-red">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="mb-16 text-center">
-                <p class="text-primary-red text-xl font-bold uppercase tracking-widest mb-3">02 // THE CHANNELS</p>
-                <h2 class="modular-heading text-white">Content Streams</h2>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="bg-gray-900 p-8 border-l-4 border-primary-red transition hover:bg-gray-800">
-                    <h3 class="text-3xl font-bold text-white mb-3">Documentaries</h3>
-                    <p class="text-gray-400">Long-form features focusing on compelling human and global narratives.</p>
-                </div>
-                <div class="bg-gray-900 p-8 border-l-4 border-primary-red transition hover:bg-gray-800">
-                    <h3 class="text-3xl font-bold text-white mb-3">Interviews</h3>
-                    <p class="text-gray-400">In-depth conversations with industry leaders and artists.</p>
-                </div>
-                <div class="bg-gray-900 p-8 border-l-4 border-primary-red transition hover:bg-gray-800">
-                    <h3 class="text-3xl font-bold text-white mb-3">Digital Strategy</h3>
-                    <p class="text-gray-400">Crafting high-engagement content for optimized distribution.</p>
-                </div>
-                <div class="bg-gray-900 p-8 border-l-4 border-primary-red transition hover:bg-gray-800">
-                    <h3 class="text-3xl font-bold text-white mb-3">Podcasts</h3>
-                    <p class="text-gray-400">Audio series featuring interviews with leaders in media.</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <section id="team" class="py-24 bg-gray-900 border-t border-primary-red">
         <div class="max-w-7xl mx-auto px-4">
             <div class="mb-16 text-center">
                 <p class="text-primary-red text-xl font-bold uppercase tracking-widest mb-3">03 // THE ENGINE</p>
                 <h2 class="modular-heading text-white">The Collective</h2>
-                <p class="text-gray-500 mt-4 italic text-lg">Click on a member to learn more about their journey.</p>
+                <p class="text-gray-400 mt-2 italic">Click a member to view their profile</p>
             </div>
             
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
-                <div class="member-card flex flex-col items-center p-4 bg-black border border-gray-800 hover:border-primary-red transition duration-300 cursor-pointer" 
-                     data-name="AMZA" data-real="Hamza [Surname]" data-img="amza_photo.jpg"
-                     data-bio="Hamza is the visionary behind Next Gen Media. As Lead Director, he focuses on cinematic precision and narrative depth, ensuring every production resonates globally.">
-                    <img src="amza_photo.jpg" alt="Amza" class="member-photo">
-                    <h3 class="text-lg font-semibold text-white">AMZA</h3>
-                    <p class="text-sm text-primary-red mt-1 text-center">Lead Director</p>
+                
+                <div class="member-card flex flex-col items-center p-4 bg-black border border-gray-800 hover:border-primary-red transition cursor-pointer" 
+                     data-name="AMZA" data-real="Abu Bakarr Hamza Kanu" data-img="amza_photo.jpg" data-bio="Lead Director and the driving force behind the vision of Next Gen Media.">
+                    <img src="amza_photo.jpg" class="member-photo">
+                    <h3 class="text-white font-bold">AMZA</h3>
+                    <p class="text-xs text-primary-red">Lead Director</p>
                 </div>
 
-                <div class="member-card flex flex-col items-center p-4 bg-black border border-gray-800 hover:border-primary-red transition duration-300 cursor-pointer" 
-                     data-name="SKINNY_POSH" data-real="[Real Name]" data-img="skinny_posh_photo.jpg"
-                     data-bio="With a sharp eye for pacing and rhythm, Skinny_Posh transforms raw footage into compelling stories that grip the audience from the first frame.">
-                    <img src="skinny_posh_photo.jpg" alt="Skinny_Posh" class="member-photo">
-                    <h3 class="text-lg font-semibold text-white">SKINNY_POSH</h3>
-                    <p class="text-sm text-primary-red mt-1 text-center">Video Editor</p>
+                <div class="member-card flex flex-col items-center p-4 bg-black border border-gray-800 hover:border-primary-red transition cursor-pointer" 
+                     data-name="SKINNY_POSH" data-real="Nabie Bangura" data-img="skinny_posh_photo.jpg" data-bio="Master of the edit, bringing rhythm and pace to every video production.">
+                    <img src="skinny_posh_photo.jpg" class="member-photo">
+                    <h3 class="text-white font-bold">SKINNY_POSH</h3>
+                    <p class="text-xs text-primary-red">Video Editor</p>
                 </div>
 
-                <div class="member-card flex flex-col items-center p-4 bg-black border border-gray-800 hover:border-primary-red transition duration-300 cursor-pointer" 
-                     data-name="BOLLER_KING" data-real="[Real Name]" data-img="boller_king_photo.jpg"
-                     data-bio="The master of stills. Boller_King ensures every captured moment is polished to perfection, maintaining the visual standard of the collective.">
-                    <img src="boller_king_photo.jpg" alt="Boller_King" class="member-photo">
-                    <h3 class="text-lg font-semibold text-white">BOLLER_KING</h3>
-                    <p class="text-sm text-primary-red mt-1 text-center">Photo Editor</p>
+                <div class="member-card flex flex-col items-center p-4 bg-black border border-gray-800 hover:border-primary-red transition cursor-pointer" 
+                     data-name="BOLLER_KING" data-real="Osman Bah" data-img="boller_king_photo.jpg" data-bio="Expert photo editor focusing on high-end visual aesthetics.">
+                    <img src="boller_king_photo.jpg" class="member-photo">
+                    <h3 class="text-white font-bold">BOLLER_KING</h3>
+                    <p class="text-xs text-primary-red">Photo Editor</p>
                 </div>
 
-                <div class="member-card flex flex-col items-center p-4 bg-black border border-gray-800 hover:border-primary-red transition duration-300 cursor-pointer" 
-                     data-name="JOSHUA" data-real="Joshua [Surname]" data-img="JOSHUA_PHOTO.jpg"
-                     data-bio="Joshua is a key contributor to the creative process, bringing fresh perspectives and technical support to the field productions.">
-                    <img src="JOSHUA_PHOTO.jpg" alt="Joshua" class="member-photo">
-                    <h3 class="text-lg font-semibold text-white">JOSHUA</h3>
-                    <p class="text-sm text-primary-red mt-1 text-center">Creative Member</p>
+                <div class="member-card flex flex-col items-center p-4 bg-black border border-gray-800 hover:border-primary-red transition cursor-pointer" 
+                     data-name="SHARP_BOY" data-real="Mamoud Kargbo" data-img="sharp_boy_photo.jpg" data-bio="Supporting the visual department with precision and creativity.">
+                    <img src="sharp_boy_photo.jpg" class="member-photo">
+                    <h3 class="text-white font-bold">SHARP_BOY</h3>
+                    <p class="text-xs text-primary-red">Assistant Photo Editor</p>
                 </div>
 
-                <div class="member-card flex flex-col items-center p-4 bg-black border border-gray-800 hover:border-primary-red transition duration-300 cursor-pointer" 
-                     data-name="MBALU" data-real="Mbalu [Surname]" data-img="mbalu_photo.jpg"
-                     data-bio="Mbalu brings an essential spark to the team, focusing on the human elements of our documentaries and media strategy.">
-                    <img src="mbalu_photo.jpg" alt="Mbalu" class="member-photo">
-                    <h3 class="text-lg font-semibold text-white">MBALU</h3>
-                    <p class="text-sm text-primary-red mt-1 text-center">Member</p>
+                <div class="member-card flex flex-col items-center p-4 bg-black border border-gray-800 hover:border-primary-red transition cursor-pointer" 
+                     data-name="JOSHUA" data-real="Joshua Alimamy Siesay" data-img="JOSHUA_PHOTO.jpg" data-bio="Creative member contributing to the collective's growth.">
+                    <img src="JOSHUA_PHOTO.jpg" class="member-photo">
+                    <h3 class="text-white font-bold">JOSHUA</h3>
+                    <p class="text-xs text-primary-red">Member</p>
                 </div>
+
+                <div class="member-card flex flex-col items-center p-4 bg-black border border-gray-800 hover:border-primary-red transition cursor-pointer" 
+                     data-name="MBALU" data-real="Mbalu " data-img="mbalu_photo.jpg" data-bio="Key contributor to media projects and community engagement.">
+                    <img src="mbalu_photo.jpg" class="member-photo">
+                    <h3 class="text-white font-bold">MBALU</h3>
+                    <p class="text-xs text-primary-red">Member</p>
+                </div>
+
+                <div class="member-card flex flex-col items-center p-4 bg-black border border-gray-800 hover:border-primary-red transition cursor-pointer" 
+                     data-name="HAJARATU" data-real="Hajaratu Abu Tarawallie" data-img="hajaratu_photo.jpg" data-bio="Bringing fresh ideas and dedication to the Next Gen collective.">
+                    <img src="hajaratu_photo.jpg" class="member-photo">
+                    <h3 class="text-white font-bold">HAJARATU</h3>
+                    <p class="text-xs text-primary-red">Member</p>
+                </div>
+
+                <div class="member-card flex flex-col items-center p-4 bg-black border border-gray-800 hover:border-primary-red transition cursor-pointer" 
+                     data-name="PHINA" data-real="Joshephine Conteh " data-img="phina_photo.jpg" data-bio="Active member helping shape the narrative of our digital content.">
+                    <img src="phina_photo.jpg" class="member-photo">
+                    <h3 class="text-white font-bold">PHINA</h3>
+                    <p class="text-xs text-primary-red">Member</p>
+                </div>
+
+                <div class="member-card flex flex-col items-center p-4 bg-black border border-gray-800 hover:border-primary-red transition cursor-pointer" 
+                     data-name="ELLA" data-real="Kadie Samai" data-img="ella_photo.jpg" data-bio="Passionate about media storytelling and brand impact.">
+                    <img src="ella_photo.jpg" class="member-photo">
+                    <h3 class="text-white font-bold">ELLA</h3>
+                    <p class="text-xs text-primary-red">Member</p>
+                </div>
+
+                <div class="member-card flex flex-col items-center p-4 bg-black border border-gray-800 hover:border-primary-red transition cursor-pointer" 
+                     data-name="LUCY" data-real="Lucy Kamara" data-img="lucy_photo.jpg" data-bio="Dedication and creativity define Lucy's role in the team.">
+                    <img src="lucy_photo.jpg" class="member-photo">
+                    <h3 class="text-white font-bold">LUCY</h3>
+                    <p class="text-xs text-primary-red">Member</p>
+                </div>
+
             </div>
         </div>
     </section>
 
     <div id="bioModal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-black/95 backdrop-blur-md">
-        <div class="bg-gray-900 border-2 border-primary-red max-w-lg w-full p-8 relative modal-animate">
-            <button id="closeModal" class="absolute top-4 right-4 text-white hover:text-primary-red transition">
-                <i data-feather="x"></i>
-            </button>
-            <div class="flex flex-col items-center text-center">
-                <img id="modalImg" src="" alt="" class="member-photo w-32 h-32 mb-6 border-4">
-                <h2 id="modalName" class="text-4xl font-black text-white uppercase tracking-tighter"></h2>
-                <p id="modalRealName" class="text-primary-red font-bold mb-4 tracking-widest text-xs uppercase"></p>
-                <div class="h-px w-24 bg-primary-red/50 mb-6"></div>
-                <p id="modalBio" class="text-gray-300 italic text-lg leading-relaxed"></p>
-            </div>
+        <div class="bg-gray-900 border-2 border-primary-red max-w-lg w-full p-8 relative modal-animate text-center">
+            <button id="closeModal" class="absolute top-4 right-4 text-white hover:text-primary-red"><i data-feather="x"></i></button>
+            <img id="modalImg" src="" class="member-photo w-32 h-32 mx-auto mb-6 border-4">
+            <h2 id="modalName" class="text-4xl font-black text-white uppercase"></h2>
+            <p id="modalRealName" class="text-primary-red font-bold mb-4 text-xs uppercase"></p>
+            <div class="h-px w-24 bg-primary-red/50 mx-auto mb-6"></div>
+            <p id="modalBio" class="text-gray-300 italic text-lg leading-relaxed"></p>
         </div>
     </div>
 
-    <section id="latest-release" class="py-24 bg-black border-t border-primary-red text-center">
-        <div class="max-w-4xl mx-auto px-4">
-            <p class="text-primary-red text-xl font-bold uppercase tracking-widest mb-3">04 // NEW RELEASE</p>
-            <h2 class="modular-heading text-white mb-10">Our Latest Production.</h2>
-            <div class="video-container mx-auto max-w-3xl mb-10"></div>
-            <a href="https://www.youtube.com/@NextGenMediaSL" target="_blank" class="bg-white text-black font-bold py-3 px-10 rounded-sm text-lg transition hover:bg-gray-300">
-                VISIT YOUTUBE CHANNEL
-            </a>
-        </div>
-    </section>
-
-    <footer class="bg-black py-8 border-t border-gray-800 text-center">
-        <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center text-sm text-gray-400">
-            <p>&copy; 2025 NEXT GEN MEDIA. All rights reserved.</p>
-            <div class="flex space-x-6 mt-4 sm:mt-0">
-                <a href="https://www.youtube.com/@NextGenMediaSL" target="_blank" class="hover:text-primary-red transition"><i data-feather="youtube"></i></a>
-                <a href="https://www.tiktok.com/@next.gen.media60?_r=1&_t=ZS-91wjogCHWVE" target="_blank" class="hover:text-primary-red transition">
-                    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M12.5 5.76C12.8 5.8 13.1 5.8 13.4 5.8c.2 0 .4 0 .6 0v3.6c-.3 0-.6-.1-.9-.2-.3-.1-.7-.2-1-.2s-.6-.1-.9-.1c-.3 0-.6 0-.8.1-.2.1-.4.2-.6.4-.1.1-.3.3-.4.5-.1.2-.1.5-.1.7 0 .4.1.7.3 1s.5.5.8.6c.3.1.7.2 1.1.2s.8.1 1.2.1V14c-.6 0-1.2 0-1.8-.1-.6-.1-1.2-.2-1.7-.4-.6-.2-1.1-.5-1.5-.8-.4-.4-.7-.9-.9-1.5-.2-.5-.3-1.2-.3-1.8 0-.8.1-1.5.3-2.1.2-.6.5-1.2.9-1.7.4-.5.9-1 1.5-1.3.6-.3 1.2-.5 1.9-.6h.5V2.3L22 2.3v3.4h-5.2c-.2 0-.3.1-.3.3v10.3c0 .5-.1 1-.2 1.4s-.4.8-.7 1.1c-.3.3-.6.5-1 .7-.4.2-.9.3-1.4.3-.6 0-1.2-.1-1.7-.3-.5-.2-1-.4-1.4-.8-.4-.3-.7-.7-.9-1.2-.2-.4-.3-.9-.3-1.4 0-.5.1-1 .2-1.5s.4-.9.7-1.3c.3-.4.7-.7 1.1-.9.4-.2.8-.3 1.3-.4h.5V17c-.3 0-.6 0-.9-.1s-.6-.1-.8-.2c-.3-.1-.5-.2-.7-.3-.2-.1-.4-.3-.5-.4-.1-.1-.3-.3-.4-.5-.1-.2-.1-.4-.1-.6s.1-.5.2-.7c.1-.2.3-.4.5-.5.2-.1.4-.2.7-.3.3-.1.6-.1.9-.1h.6V5.7z"/></svg>
-                </a>
-                <a href="#" class="hover:text-primary-red transition"><i data-feather="instagram"></i></a>
-            </div>
-        </div>
-    </footer>
-
     <script>
         feather.replace();
-
         const modal = document.getElementById('bioModal');
-        const closeModal = document.getElementById('closeModal');
         const cards = document.querySelectorAll('.member-card');
-
         cards.forEach(card => {
             card.addEventListener('click', () => {
-                // Populate Modal Data
                 document.getElementById('modalName').innerText = card.dataset.name;
                 document.getElementById('modalRealName').innerText = `Real Name: ${card.dataset.real}`;
                 document.getElementById('modalBio').innerText = card.dataset.bio;
                 document.getElementById('modalImg').src = card.dataset.img;
-
-                // Open Modal
-                modal.classList.remove('hidden');
-                modal.classList.add('flex');
-                document.body.style.overflow = 'hidden'; // Lock scrolling
+                modal.classList.remove('hidden'); modal.classList.add('flex');
+                document.body.style.overflow = 'hidden';
             });
         });
-
-        const closeFunc = () => {
-            modal.classList.add('hidden');
-            modal.classList.remove('flex');
-            document.body.style.overflow = 'auto'; // Unlock scrolling
-        };
-
-        closeModal.addEventListener('click', closeFunc);
-        modal.addEventListener('click', (e) => { if(e.target === modal) closeFunc(); });
+        document.getElementById('closeModal').addEventListener('click', () => {
+            modal.classList.add('hidden'); modal.classList.remove('flex');
+            document.body.style.overflow = 'auto';
+        });
     </script>
 </body>
 </html>
