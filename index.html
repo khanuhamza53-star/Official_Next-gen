@@ -362,48 +362,24 @@
 
 <div id="bioModal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-black/95 backdrop-blur-md">
     <div class="bg-gray-900 border-2 border-primary-red max-w-lg w-full p-8 relative modal-animate text-center">
-        <button id="closeModal" class="absolute top-4 right-4 text-white hover:text-primary-red transition">
+        <button id="closeModal" class="absolute top-4 right-4 text-white hover:text-primary-red transition duration-300">
             <i data-feather="x" class="w-8 h-8"></i>
         </button>
-        <img id="modalImg" src="" alt="" class="w-24 h-24 rounded-full border-4 border-primary-red mx-auto mb-6 object-cover">
+        <img id="modalImg" src="" alt="" class="member-photo w-32 h-32 mx-auto mb-6 border-4">
         <h2 id="modalName" class="text-4xl font-black text-white uppercase tracking-tighter"></h2>
         <p id="modalRealName" class="text-primary-red font-bold mb-1 tracking-widest text-xs uppercase"></p>
         
         <div class="flex items-center justify-center gap-2 mb-4">
-            <i data-feather="phone" class="w-3 h-3 text-gray-500"></i>
-            <p id="modalMobile" class="text-gray-400 font-mono text-xs tracking-widest uppercase"></p>
+            <span class="text-primary-red font-bold text-sm tracking-widest">CONTACT:</span>
+            <a id="modalMobileLink" href="#" class="text-gray-300 font-mono text-base tracking-widest uppercase hover:text-primary-red transition-colors">
+                <span id="modalMobileDisplay"></span>
+            </a>
         </div>
-
+        
         <div class="h-px w-24 bg-primary-red/50 mx-auto mb-6"></div>
         <p id="modalBio" class="text-gray-300 italic text-lg leading-relaxed"></p>
     </div>
 </div>
-
-
-    <div id="bioModal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-black/95 backdrop-blur-md">
-
-        <div class="bg-gray-900 border-2 border-primary-red max-w-lg w-full p-8 relative modal-animate text-center">
-
-            <button id="closeModal" class="absolute top-4 right-4 text-white hover:text-primary-red transition duration-300">
-
-                <i data-feather="x" class="w-8 h-8"></i>
-
-            </button>
-
-            <img id="modalImg" src="" alt="" class="member-photo w-32 h-32 mx-auto mb-6 border-4">
-
-            <h2 id="modalName" class="text-4xl font-black text-white uppercase tracking-tighter"></h2>
-
-            <p id="modalRealName" class="text-primary-red font-bold mb-4 tracking-widest text-xs uppercase"></p>
-
-            <div class="h-px w-24 bg-primary-red/50 mx-auto mb-6"></div>
-
-            <p id="modalBio" class="text-gray-300 italic text-lg leading-relaxed"></p>
-
-        </div>
-
-    </div>
-
 
 
     <section id="latest-release" class="py-24 bg-black border-t border-primary-red text-center">
@@ -516,26 +492,26 @@
 
             card.addEventListener('click', () => {
 
+                // Get mobile number and remove non-digit characters for tel: link (optional, but safer)
+
+                const rawMobile = card.getAttribute('data-mobile');
+                const cleanMobile = rawMobile.replace(/[^0-9+]/g, '');
+
                 // Populate Modal Data
-
                 document.getElementById('modalName').innerText = card.getAttribute('data-name');
-
                 document.getElementById('modalRealName').innerText = `Real Name: ${card.getAttribute('data-real')}`;
-
                 document.getElementById('modalBio').innerText = card.getAttribute('data-bio');
-
                 document.getElementById('modalImg').src = card.getAttribute('data-img');
 
+                // Set the link href and display text for the modal
+                document.getElementById('modalMobileLink').href = `tel:${cleanMobile}`;
+                document.getElementById('modalMobileDisplay').innerText = rawMobile;
 
 
                 // Show Modal
-
                 modal.classList.remove('hidden');
-
                 modal.classList.add('flex');
-
                 document.body.style.overflow = 'hidden'; // Stop background scrolling
-
             });
 
         });
@@ -580,4 +556,4 @@
 
 </body>
 
-</html
+</html>
