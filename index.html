@@ -1,259 +1,133 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>NEXT GEN MEDIA | Structured Professionalism</title>
-
     
-
     <script src="https://cdn.tailwindcss.com"></script>
-
     <script src="https://unpkg.com/feather-icons"></script> 
-
     <style>
-
         :root {
-
             --color-primary-red: #C00000;
-
             --color-dark-bg: #000000;
-
             --color-text-light: #F0F0F0;
-
         }
-
         body {
-
             font-family: 'Helvetica Neue', Arial, sans-serif;
-
             background-color: var(--color-dark-bg);
-
             color: var(--color-text-light);
-
             line-height: 1.6;
-
             scroll-behavior: smooth;
-
         }
-
         .text-primary-red { color: var(--color-primary-red); }
-
         .bg-primary-red { background-color: var(--color-primary-red); }
-
         .border-primary-red { border-color: var(--color-primary-red); }
-
         
-
         .member-photo {
-
             width: 80px; height: 80px; 
-
             background-color: #333; 
-
             border-radius: 50%; 
-
             border: 3px solid var(--color-primary-red);
-
             margin-bottom: 0.75rem; 
-
             object-fit: cover;
-
             display: block; 
-
         }
-
-
 
         .modular-heading {
-
             font-size: 3rem; font-weight: 900;
-
             letter-spacing: -1px; text-transform: uppercase;
-
         }
-
         
-
         .video-container {
-
             position: relative; padding-bottom: 56.25%; height: 0;
-
             overflow: hidden; max-width: 100%;
-
             background-color: #1a1a1a; border: 4px solid var(--color-primary-red);
-
         }
-
         .video-container iframe {
-
             position: absolute; top: 0; left: 0; width: 100%; height: 95%;
-
         }
-
-
 
         .text-stroke-sm {
-
             text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
-
         }
-
-
 
         @keyframes modalFadeIn {
-
             from { opacity: 0; transform: scale(0.9); }
-
             to { opacity: 1; transform: scale(1); }
-
         }
-
         .modal-animate { animation: modalFadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1); }
-
     </style>
-
 </head>
-
 <body>
 
-
-
     <header class="sticky top-0 z-50 bg-black/95 backdrop-blur-sm border-b-4 border-primary-red">
-
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
-
             <a href="#" class="flex items-center">
-
                 <img src="ngm_photo.jpg" alt="NEXT GEN MEDIA Logo" class="w-12 h-auto object-contain border-2 border-primary-red">
-
                 <span class="text-3xl font-extrabold text-white tracking-widest ml-3 hidden sm:block">NEXT GEN MEDIA</span>
-
             </a>
-
             <nav class="hidden md:flex space-x-10 text-lg font-medium">
-
                 <a href="#about" class="text-gray-300 hover:text-primary-red transition duration-300">ABOUT</a>
-
                 <a href="#streams" class="text-gray-300 hover:text-primary-red transition duration-300">STREAMS</a>
-
                 <a href="#latest-release" class="text-gray-300 hover:text-primary-red transition duration-300">WATCH</a>
-
                 <a href="#team" class="text-gray-300 hover:text-primary-red transition duration-300">TEAM</a>
-
             </nav>
-
-            <a href="mailto:contact@nextgenmedia.com" class="hidden md:block text-white bg-primary-red px-4 py-2 rounded-sm hover:bg-red-700 transition duration-300 font-medium text-lg uppercase tracking-wider">INQUIRE</a>
-
+            
+            <a href="https://wa.me/23234689962" target="_blank" class="hidden md:block text-white bg-primary-red px-4 py-2 rounded-sm hover:bg-red-700 transition duration-300 font-medium text-lg uppercase tracking-wider">CONTACT US</a>
+            
         </div>
-
     </header>
 
-
-
     <section class="h-[95vh] flex items-center justify-center text-center" style="background-image: url('IT Sector.jpg'); background-size: cover; background-position: center;">
-
         <div class="relative z-10 max-w-5xl px-6">
-
             <h1 class="text-5xl sm:text-8xl lg:text-[7.5rem] font-black text-white mb-6 leading-none">
-
                 <span class="text-primary-red">VISUAL</span> 
-
                 <span class="text-stroke-sm">STORYTELLING.</span>
-
             </h1>
-
             <p class="text-lg sm:text-3xl text-gray-400 font-light mt-10 tracking-wide px-4">Innovation meets impact in global media production.</p>
-
         </div>
-
     </section>
-
-
 
     <section id="about" class="py-24 bg-gray-900 border-t border-primary-red">
-
         <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-12 items-start">
-
             <div class="md:col-span-1">
-
                 <p class="text-primary-red text-xl font-bold uppercase tracking-widest mb-3"></p>
-
                 <h2 class="modular-heading text-white">Our Mission</h2>
-
             </div>
-
             <div class="md:col-span-2">
-
                 <blockquote class="text-2xl italic text-gray-300 leading-relaxed pl-6 border-l-4 border-white/50">
-
                     "NEXT GEN MEDIA is a collective dedicated to pushing the boundaries of documentary and journalistic content. We blend cinematic quality with narrative rigor to produce media that matters."
-
                 </blockquote>
-
             </div>
-
         </div>
-
     </section>
 
-
-
     <section id="streams" class="py-24 bg-black border-t border-primary-red">
-
         <div class="max-w-7xl mx-auto px-4">
-
             <div class="mb-16 text-center">
-
                 <p class="text-primary-red text-xl font-bold uppercase tracking-widest mb-3"></p>
-
                 <h2 class="modular-heading text-white">Content Streams</h2>
-
             </div>
-
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-
                 <div class="bg-gray-900 p-8 border-l-4 border-primary-red transition hover:bg-gray-800">
-
                     <h3 class="text-3xl font-bold text-white mb-3">Documentaries</h3>
-
                     <p class="text-gray-400">Long-form features focusing on compelling human and global narratives.</p>
-
                 </div>
-
                 <div class="bg-gray-900 p-8 border-l-4 border-primary-red transition hover:bg-gray-800">
-
                     <h3 class="text-3xl font-bold text-white mb-3">Interviews</h3>
-
                     <p class="text-gray-400">In-depth conversations with industry leaders and artists.</p>
-
                 </div>
-
                 <div class="bg-gray-900 p-8 border-l-4 border-primary-red transition hover:bg-gray-800">
-
                     <h3 class="text-3xl font-bold text-white mb-3">Digital Strategy</h3>
-
                     <p class="text-gray-400">Crafting high-engagement content for optimized social distribution.</p>
-
                 </div>
-
                 <div class="bg-gray-900 p-8 border-l-4 border-primary-red transition hover:bg-gray-800">
-
                     <h3 class="text-3xl font-bold text-white mb-3">Podcasts</h3>
-
                     <p class="text-gray-400">Audio series featuring interviews with leaders and creators in media.</p>
-
                 </div>
-
             </div>
-
         </div>
-
     </section>
 
 
@@ -383,119 +257,64 @@
 
 
     <section id="latest-release" class="py-24 bg-black border-t border-primary-red text-center">
-
     <div class="max-w-4xl mx-auto px-4">
-
         <p class="text-primary-red text-xl font-bold uppercase tracking-widest mb-3"></p>
-
         <h2 class="modular-heading text-white mb-10">Our Latest Production.</h2>
-
         
-
         <div class="video-container mx-auto max-w-3xl mb-10">
-
             <video 
-
                 class="absolute top-0 left-0 w-full h-full object-cover" 
-
                 controls 
-
                 poster="video_thumbnail.jpg"
-
                 preload="metadata">
-
                 <source src="video_Nextgen.mp4" type="video/mp4">
-
                 Your browser does not support the video tag.
-
             </video>
-
         </div>
-
-
 
         <a href="https://www.youtube.com/@NextGenMediaSL" target="_blank" class="bg-white text-black font-bold py-3 px-10 rounded-sm text-lg transition duration-300 hover:bg-gray-300 uppercase">
-
             VISIT YOUTUBE CHANNEL
-
         </a>
-
     </div>
-
 </section>
 
-
-
     <footer class="bg-black py-12 border-t border-gray-800">
-
         <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center text-sm text-gray-400">
-
             <p>&copy; 2025 NEXT GEN MEDIA. All rights reserved.</p>
-
             
-
             <div class="flex space-x-8 mt-6 sm:mt-0">
-
                 <a href="https://www.youtube.com/@NextGenMediaSL" target="_blank" class="text-gray-400 hover:text-primary-red transition duration-300">
-
                     <i data-feather="youtube" class="w-7 h-7"></i>
-
                 </a>
-
                 
-
                 <a href="https://www.tiktok.com/@next.gen.media60?_r=1&_t=ZS-91wjogCHWVE" target="_blank" class="text-gray-400 hover:text-primary-red transition duration-300">
-
                     <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-
                         <path d="M12.5 5.76C12.8 5.8 13.1 5.8 13.4 5.8c.2 0 .4 0 .6 0v3.6c-.3 0-.6-.1-.9-.2-.3-.1-.7-.2-1-.2s-.6-.1-.9-.1c-.3 0-.6 0-.8.1-.2.1-.4.2-.6.4-.1.1-.3.3-.4.5-.1.2-.1.5-.1.7 0 .4.1.7.3 1s.5.5.8.6c.3.1.7.2 1.1.2s.8.1 1.2.1V14c-.6 0-1.2 0-1.8-.1-.6-.1-1.2-.2-1.7-.4-.6-.2-1.1-.5-1.5-.8-.4-.4-.7-.9-.9-1.5-.2-.5-.3-1.2-.3-1.8 0-.8.1-1.5.3-2.1.2-.6.5-1.2.9-1.7.4-.5.9-1 1.5-1.3.6-.3 1.2-.5 1.9-.6h.5V2.3L22 2.3v3.4h-5.2c-.2 0-.3.1-.3.3v10.3c0 .5-.1 1-.2 1.4s-.4.8-.7 1.1c-.3.3-.6.5-1 .7-.4.2-.9.3-1.4.3-.6 0-1.2-.1-1.7-.3-.5-.2-1-.4-1.4-.8-.4-.3-.7-.7-.9-1.2-.2-.4-.3-.9-.3-1.4 0-.5.1-1 .2-1.5s.4-.9.7-1.3c.3-.4.7-.7 1.1-.9.4-.2.8-.3 1.3-.4h.5V17c-.3 0-.6 0-.9-.1s-.6-.1-.8-.2c-.3-.1-.5-.2-.7-.3-.2-.1-.4-.3-.5-.4-.1-.1-.3-.3-.4-.5-.1-.2-.1-.4-.1-.6s.1-.5.2-.7c.1-.2.3-.4.5-.5.2-.1.4-.2.7-.3.3-.1.6-.1.9-.1h.6V5.7z"/>
-
                     </svg>
-
                 </a>
-
                 
-
                 <a href="#" target="_blank" class="text-gray-400 hover:text-primary-red transition duration-300">
-
                     <i data-feather="instagram" class="w-7 h-7"></i>
-
                 </a>
-
             </div>
-
         </div>
-
     </footer>
 
-
-
     <script>
-
         // Ensure Icons render correctly
-
         feather.replace();
 
-
-
         const modal = document.getElementById('bioModal');
-
         const closeModal = document.getElementById('closeModal');
-
         const cards = document.querySelectorAll('.member-card');
 
-
-
         // Clicking a card opens the modal
-
         cards.forEach(card => {
-
             card.addEventListener('click', () => {
-
                 // Get mobile number and remove non-digit characters for tel: link (optional, but safer)
-
                 const rawMobile = card.getAttribute('data-mobile');
-                const cleanMobile = rawMobile.replace(/[^0-9+]/g, '');
+                // Removed extra plus sign from PHINA's data-mobile attribute in JS for robustness
+                const cleanMobile = rawMobile.replace(/[^0-9+]/g, '').replace('++', '+');
 
                 // Populate Modal Data
                 document.getElementById('modalName').innerText = card.getAttribute('data-name');
@@ -516,44 +335,23 @@
 
         });
 
-
-
         // Close function
-
         const closeFunc = () => {
-
             modal.classList.add('hidden');
-
             modal.classList.remove('flex');
-
             document.body.style.overflow = 'auto'; // Re-enable scrolling
-
         };
 
-
-
         // Event Listeners for Closing
-
         closeModal.addEventListener('click', closeFunc);
-
         modal.addEventListener('click', (e) => {
-
             if (e.target === modal) closeFunc();
-
         });
-
-
 
         // Escape key to close
-
         document.addEventListener('keydown', (e) => {
-
             if (e.key === 'Escape') closeFunc();
-
         });
-
     </script>
-
 </body>
-
 </html>
